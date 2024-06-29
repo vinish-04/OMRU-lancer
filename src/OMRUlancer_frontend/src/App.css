@@ -1,0 +1,22 @@
+*{
+    @apply m-0 p-0
+}
+
+body{
+    @apply relative overflow-x-hidden
+}
+
+.app{
+}
+.page{
+    @apply w-screen h-screen bg-purple-200
+}
+.page-new{
+    @apply bg-gray-50 w-screen h-screen flex flex-col items-center justify-center
+}
+.modal{
+    @apply flex flex-col items-center justify-center h-screen
+}
+.close-modal{
+    @apply absolute top-[20px] left-[5%] font-bold text-xl cursor-pointer outline-1 text-white
+}

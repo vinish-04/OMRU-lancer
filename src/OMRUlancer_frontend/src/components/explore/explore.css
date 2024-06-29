@@ -1,0 +1,45 @@
+.explore-page{
+    @apply bg-gray-200 w-screen min-h-screen flex flex-col items-center 
+}
+.explore-main{
+    @apply w-full flex mt-32 px-10 flex-col items-center
+}
+
+/* filter  */
+
+.explore-filter-cont{
+    @apply w-[60%] bg-white rounded-xl shadow-2xl my-10 flex justify-between px-10 py-6 items-center
+}
+.e-min-bounty{
+    @apply rounded-3xl px-6 py-4 shadow-xl
+}
+.explore-currency-drop{
+    @apply bg-white font-semibold rounded-3xl py-4 px-4 shadow-2xl
+}
+.e-currency-op{
+    @apply bg-white py-4 px-4 rounded-lg
+}
+.explore-filter-btn{
+    @apply my-5 px-6 py-3 font-bold bg-gradient-to-br from-purple-900 to-blue-950 rounded-3xl text-xl text-white;
+}
+
+/* job list  */
+
+.explore-joblist{
+    @apply w-[85%] flex flex-wrap gap-8 mb-10 justify-center
+}
+.e-jobcard{
+    @apply cursor-pointer shadow-xl rounded-xl bg-white max-w-[350px] flex flex-col items-center
+}
+.e-jobcard-detail-cont{
+    @apply flex flex-col items-start w-[90%] relative
+}
+.e-jobcard-img{
+    @apply rounded-xl h-[80%] w-full mb-3
+}
+.e-jobcard-text{
+    @apply text-sm
+}
+.e-jobcard-redirect{
+    @apply text-lg absolute top-0 right-0
+}

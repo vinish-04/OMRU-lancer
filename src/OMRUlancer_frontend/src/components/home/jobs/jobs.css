@@ -1,0 +1,24 @@
+.f-job-sec{
+    @apply bg-white w-screen py-5 flex flex-col items-center
+}
+.f-sec-title{
+    @apply text-6xl text-purple-950 font-bold mt-8 mb-20 border-y-2 border-black py-2
+}
+.f-job-card-cont{
+    @apply w-[85%] flex flex-wrap gap-20 mb-10 justify-center
+}
+.f-jobcard{
+    @apply cursor-pointer shadow-xl rounded-xl bg-white max-w-[350px] flex flex-col items-center
+}
+.f-jobcard-img{
+    @apply rounded-xl h-[80%] w-full mb-3
+}
+.f-jobcard-detail-cont{
+    @apply flex flex-col items-start w-[90%] relative
+}
+.f-jobcard-text{
+    @apply text-sm
+}
+.f-jobcard-redirect{
+    @apply text-lg absolute top-0 right-0
+}

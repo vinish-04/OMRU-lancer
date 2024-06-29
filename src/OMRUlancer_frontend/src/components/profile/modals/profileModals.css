@@ -1,0 +1,30 @@
+.addjob-modal{
+    @apply bg-black relative rounded-xl w-[500px] py-10 shadow-2xl flex flex-col items-center
+}
+.addjob-title{
+    @apply font-semibold text-center text-2xl mb-6 text-white
+}
+.addjob-title-inp{
+    @apply rounded-3xl px-6 py-4 shadow-xl
+}
+.addjob-des-inp{
+    @apply rounded-xl my-4 text-sm my-6 px-3 py-2
+}
+.addjob-reward-cont{
+    @apply w-[70%] flex justify-between items-center my-8 bg-gray-100 rounded-full px-4
+}
+.addjob-reward-inp{
+    @apply rounded-3xl px-6 py-4 shadow-xl
+}
+.addjob-reward-cur{
+    @apply bg-white font-semibold rounded-3xl py-4 px-4 shadow-2xl
+}
+.addjob-cur-label{
+    @apply font-semibold text-center text-lg 
+}
+.addjob-reward-cur-op{
+    @apply bg-white py-4 px-4 rounded-lg
+}
+.addjob-sub-btn{
+    @apply my-5 px-6 py-3 font-bold bg-gradient-to-br from-purple-900 to-blue-950 rounded-3xl text-xl text-white;
+}

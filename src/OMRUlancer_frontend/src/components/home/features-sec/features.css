@@ -1,0 +1,27 @@
+.features-sec{
+    @apply bg-white w-screen py-5 flex flex-col items-center
+}
+.features-sec-title{
+    @apply text-6xl text-purple-950 font-bold my-8 border-y-2 border-black py-2
+}
+.feature-card-cont{
+    @apply w-10/12 flex flex-row justify-between my-28
+}
+
+/* feature card  */
+.feature-card{
+    @apply flex flex-col justify-center items-center bg-gray-800 rounded-2xl w-[20vw] h-[20vw]
+}
+.feature-card:hover{
+    @apply animate-pulse
+}
+.feature-card-icon{
+    @apply text-[10em] text-purple-400 my-4
+}
+.feature-card-title{
+    @apply text-3xl text-white font-semibold
+}
+.feature-card-desc{
+    @apply text-lg text-white text-center w-[80%]
+
+}

@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "OMRUlancer_backend": {
+      "main": "src/OMRUlancer_backend/main.mo",
+      "type": "motoko"
+    },
+    "OMRUlancer_frontend": {
+      "dependencies": [
+        "OMRUlancer_backend"
+      ],
+      "source": [
+        "src/OMRUlancer_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "OMRUlancer_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

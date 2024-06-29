@@ -1,0 +1,21 @@
+.navbar{
+    @apply z-50 w-screen py-4 flex justify-between items-center px-[6%] bg-white fixed
+}
+.nav-title{
+    @apply flex gap-2 text-3xl font-semibold justify-center text-purple-950 cursor-pointer
+}
+.nav-link-cont{
+    @apply flex w-[30%]  min-w-[450px] justify-between
+}
+.nav-link{
+    @apply text-[1.1em] font-medium cursor-pointer text-purple-950
+}
+.nav-link:hover{
+    @apply translate-y-[-2px] text-blue-600
+}
+.nav-btn{
+    @apply px-6 py-3 font-bold bg-gradient-to-br from-purple-900 to-blue-950 rounded-3xl text-xl text-white;
+}
+.nav-btn:hover{
+    @apply px-6 py-3 font-bold bg-gradient-to-br from-blue-950 to-purple-900 rounded-3xl text-xl text-white 
+}

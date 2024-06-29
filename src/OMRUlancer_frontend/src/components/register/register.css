@@ -1,0 +1,29 @@
+.page-new{
+    @apply bg-gray-50 w-screen h-screen flex flex-col items-center justify-center
+}
+.register-card{
+    @apply bg-white flex flex-col items-start justify-start min-h-[50vh] rounded-2xl shadow-xl py-4 px-7
+}
+.register-title{
+    @apply text-2xl text-black font-bold
+
+}
+.register-title2{
+    @apply text-3xl text-purple-950 font-bold mb-10
+
+}
+.register-form{
+    @apply flex flex-col items-center min-w-[400px]
+}
+.register-img{
+    @apply w-[200px] h-[200px] rounded-full outline-purple-900 shadow-2xl
+}
+.register-img-inp{
+    @apply my-5 px-6 py-3 font-medium rounded-3xl text-sm text-white bg-black;
+}
+.register-text-inp{
+    @apply px-4 shadow-xl outline-purple-800 py-3 text-lg rounded-full mb-4
+}
+.register-btn{
+    @apply my-5 px-6 py-3 font-bold bg-gradient-to-br from-purple-900 to-blue-950 rounded-3xl text-xl text-white;
+}

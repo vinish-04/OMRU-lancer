@@ -1,0 +1,22 @@
+.hero-sec{
+    @apply w-screen bg-white pt-32 pb-20 flex justify-around items-center
+}
+.hero-sec-info-cont{
+    @apply flex flex-col items-start
+}
+.hero-sec-title{
+    @apply text-5xl text-purple-800 font-bold
+}
+.hero-sec-desc{
+    @apply text-2xl text-black font-semibold my-10 w-[30vw]
+
+}
+.hero-sec-btn{
+    @apply my-5 px-6 py-3 font-bold bg-gradient-to-br from-purple-900 to-blue-950 rounded-3xl text-xl text-white;
+}
+.hero-sec-img{
+    @apply w-[40%] h-[27vw] z-10 
+}
+.hero-gradient{
+    @apply animate-pulse rounded-full absolute right-[4%] top-[15%] w-[60%] h-[27vw] bg-gradient-radial from-purple-400 to-tWhite blur-3xl z-0
+}

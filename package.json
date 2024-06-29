@@ -1,0 +1,27 @@
+{
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "name": "OMRUlancer",
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "prebuild": "npm run prebuild --workspaces --if-present",
+    "pretest": "npm run prebuild --workspaces --if-present",
+    "start": "npm start --workspaces --if-present",
+    "test": "npm test --workspaces --if-present"
+  },
+  "type": "module",
+  "workspaces": [
+    "src/OMRUlancer_frontend"
+  ],
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.2.5",
+    "firebase": "^10.12.2",
+    "framer-motion": "^11.2.9",
+    "rc-slider": "^10.6.2",
+    "react-hot-toast": "^2.4.1",
+    "react-redux": "^9.1.2",
+    "uuid": "^10.0.0"
+  }
+}

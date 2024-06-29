@@ -1,0 +1,24 @@
+.footer{
+    @apply bottom-0 w-screen bg-gray-800 text-white py-5 flex flex-col items-center 
+}
+.footer-logo{
+    @apply w-[40px] h-[40px] object-cover
+}
+.footer-text{
+    @apply my-6 opacity-90 w-[50%] text-center
+}
+.footer-icon-cont{
+    @apply flex my-6 gap-5
+}
+.footer-icon{
+    @apply text-2xl
+}
+.footer-link-cont{
+    @apply flex gap-7 my-6
+}
+.footer-link{
+
+}
+.footer-copyright{
+    @apply text-white font-normal opacity-55 text-[0.9em] mt-10
+}

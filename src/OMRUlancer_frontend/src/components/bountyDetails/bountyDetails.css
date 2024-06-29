@@ -1,0 +1,48 @@
+.bountyd-page{
+    @apply bg-gray-200 w-screen min-h-screen flex flex-col items-center 
+}
+.bountyd-main{
+    @apply w-full flex mt-32 px-10 flex-col items-center
+}
+
+/* bounty cont  */
+
+.bountyd-cont{
+    @apply bg-white my-10 rounded-2xl w-[80%] px-7 py-6
+}
+.bountyd-title{
+    @apply text-2xl font-semibold mb-7
+}
+.bountyd-img{
+    @apply rounded-xl w-[400px] h-[250px]
+}
+.bountyd-tag-cont{
+    @apply flex flex-wrap gap-6
+}
+.bountyd-tag{
+    @apply font-semibold py-3 px-5 rounded-full bg-black text-white text-sm
+}
+.bountyd-des{
+    @apply text-base font-light w-[70%] my-6
+}
+.bountyd-btn-cont{
+    @apply flex my-6
+}
+.bountyd-btn{
+    @apply mr-8 my-5 px-6 py-3 font-bold bg-gradient-to-br from-purple-900 to-blue-950 rounded-3xl text-xl text-white;
+}
+
+/* apply modal  */
+
+.apply-modal{
+    @apply bg-black relative rounded-xl w-[500px] py-10 shadow-2xl flex flex-col items-center
+}
+.apply-title{
+    @apply font-semibold text-center text-2xl text-white
+}
+.apply-btn{
+    @apply mr-8 my-5 px-6 py-3 font-bold bg-gradient-to-br from-purple-900 to-blue-950 rounded-3xl text-xl text-white;
+}
+.apply-message{
+    @apply rounded-xl my-4 text-sm my-6 px-3 py-2
+}

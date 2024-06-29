@@ -1,0 +1,90 @@
+.profile-page{
+    @apply bg-gray-200 w-screen min-h-screen flex flex-col items-center 
+}
+.profile-main{
+    @apply w-full flex mt-32 px-10 items-start
+}
+.profile-name{
+    @apply text-black font-semibold text-xl mt-6
+}
+.profile-email{
+    @apply text-black font-medium text-lg opacity-40
+
+}
+.profile-user-detail-cont{
+    @apply flex flex-col items-center shadow-xl px-6 py-8 rounded-2xl bg-white
+}
+.profile-user-detail-text-cont{
+
+}
+.profile-user-img{
+    @apply mr-8 w-[240px] h-[240px] rounded-full outline-purple-900 shadow-2xl 
+}
+.profile-provider-btn{
+    @apply my-5 px-6 py-3 font-bold bg-gradient-to-br from-purple-900 to-blue-950 rounded-3xl text-xl text-white;
+}
+
+.empty{
+    @apply text-sm my-10 w-full text-center
+}
+
+/* segment */
+
+.profile-interactive-cont{
+    @apply bg-white rounded-2xl ml-10 min-h-[80vh] shadow-2xl w-[75%] py-8 px-8 mb-8
+}
+.profile-seg-cont{
+    @apply flex w-[90%] justify-start mb-10
+}
+.profile-seg-title{
+    @apply text-lg mr-6 font-medium cursor-pointer
+}
+.seg-title-highlight{
+    @apply text-purple-900 border-b-purple-900 border-b-2
+}
+
+/* job list  */
+
+.p-addjob{
+    @apply mt-5 mb-10 px-6 py-3 font-bold bg-gradient-to-br from-purple-900 to-blue-950 rounded-3xl text-xl text-white;
+}
+
+.profile-joblist-cont{
+    @apply flex flex-wrap gap-8
+}
+.profile-job-card{
+    @apply cursor-pointer shadow-xl rounded-xl bg-white max-w-[350px] flex flex-col items-center
+}
+.p-jobcard-img{
+    @apply rounded-xl h-[80%] w-full mb-3
+}
+.p-jobcard-detail-cont{
+    @apply flex flex-col items-start w-[90%] relative
+}
+.p-jobcard-text{
+    @apply text-sm
+}
+.p-jobcard-text2{
+    @apply font-semibold my-4 underline
+}
+.p-jobcard-redirect{
+    @apply text-lg absolute top-0 right-0
+}
+
+/* application list  */
+
+.profile-applications-cont{
+    @apply flex flex-wrap gap-8
+}
+.p-application-card{
+    @apply bg-white py-6 px-8 max-w-[350px] shadow-xl relative
+}
+.p-application-title{
+    @apply text-lg font-semibold
+}
+.p-application-message{
+    @apply text-sm my-6
+}
+.p-application-redirect{
+    @apply text-lg absolute top-[15%] right-[10%]
+}
