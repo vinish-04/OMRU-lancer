@@ -28,3 +28,85 @@
 .addjob-sub-btn{
     @apply my-5 px-6 py-3 font-bold bg-gradient-to-br from-purple-900 to-blue-950 rounded-3xl text-xl text-white;
 }
+
+/* view application  */
+
+.view-job-bids-cont{
+    @apply relative bg-black rounded-2xl flex flex-col items-center py-7 px-4 min-w-[30vw]
+}
+.view-job-bids-title{
+    @apply font-semibold text-xl text-white mb-9
+}
+.view-job-bids-empty{
+    @apply font-extralight text-white text-sm my-6
+}
+.job-bid-cont{
+    @apply flex flex-col w-[90%] rounded-xl bg-white py-4 mb-4 items-center
+}
+.job-bid-header{
+    @apply flex w-[90%] justify-between items-center 
+}
+.job-bid-name{
+    @apply text-black text-base font-semibold
+}
+.job-bid-icon{
+    @apply text-3xl
+}
+.job-bid-msg-cont{
+    @apply w-[90%]
+}
+.job-bid-msg{
+    @apply text-sm w-[60%]
+}
+.job-approve-link-cont{
+    @apply w-[70%] flex flex-wrap gap-x-3 gap-y-4  items-center my-3
+}
+.job-approve-link1{
+    @apply text-green-900 text-sm font-semibold my-2 cursor-pointer px-3 py-2 rounded-lg bg-green-200
+}
+.job-approve-link2{
+    @apply text-red-700 text-sm font-semibold my-2 cursor-pointer px-3 py-2  rounded-lg bg-red-300
+}
+.job-approve-link3{
+    @apply text-purple-950 text-sm font-semibold my-2 cursor-pointer px-3 py-2  rounded-lg bg-purple-300
+}
+
+/* view freelancer  */
+
+.view-assigned-modal-cont{
+    @apply relative bg-black rounded-2xl flex flex-col items-center py-7 px-4 min-w-[400px]
+}
+.vam-title{
+    @apply font-semibold text-xl text-white mb-9 
+}
+.vam-row-item{
+    @apply flex justify-between w-[90%] text-white mb-6
+}
+.vam-r-label{
+    @apply text-base font-medium
+}
+.vam-r-value{
+    @apply text-sm font-semibold
+}
+.vam-mark-btn{
+    @apply my-5 px-4 py-2 font-bold bg-gradient-to-br from-purple-900 to-blue-950 rounded-3xl text-lg text-white;
+}
+
+
+/* become provider modal  */
+
+.bpg-close-modal{
+    @apply absolute top-[20px] right-3 font-bold text-xl cursor-pointer outline-1 
+}
+.bpg-main-cont{
+    @apply bg-black text-white w-[30vw] h-[60vh] flex flex-col items-center py-6 rounded-xl relative
+}
+.bpg-title{
+    @apply text-2xl mb-6 font-semibold
+}
+.bpg-text{
+    @apply text-sm w-[80%] h-[70%] overflow-y-scroll 
+}
+.bpg-btn{
+    @apply my-5 px-6 py-3 font-bold bg-gradient-to-br from-purple-900 to-blue-950 rounded-3xl text-xl text-white;
+}

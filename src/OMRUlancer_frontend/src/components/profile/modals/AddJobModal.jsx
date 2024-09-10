@@ -14,14 +14,14 @@ const AddJobModal = ({setShowAddJob,createJob}) => {
   async function jobcreation(){
     const title=document.querySelector('#job-t').value
     const des=document.querySelector('#job-des').value
-    const reward=parseInt(document.querySelector('#job-r').value)
+    const reward=parseFloat(document.querySelector('#job-r').value)
     const cur=document.querySelector('#job-cur').value
     console.log(title,des,reward,cur)
     createJob({
       title:title,
       description:des,
       tags:["job","demo","bounty"],
-      reward:reward,
+      reward:reward*Math.pow(10,8),
       currency:currency[cur-1]
     })
   }

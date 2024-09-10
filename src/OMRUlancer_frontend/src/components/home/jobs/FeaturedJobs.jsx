@@ -5,14 +5,14 @@ import { FaArrowUpRightFromSquare } from 'react-icons/fa6'
 const jobList=[
     {
         id: "bounty1",
-        title: "Find a lost dog",
+        title: "Find a Bug",
         description: "My dog, Charlie, went missing near Central Park. He is a small brown poodle with a friendly personality. Please help me find him!",
         tags: ["lost dog", "pet", "reward"],
         isResolved: false,
         providerID: "user123", // Replace with actual principal ID
         assignedTo: null,
-        reward: 1000,
-        currency: "USD",
+        reward: 10,
+        currency: "ICP",
         bids: ["$500 - John Doe", "$750 - Jane Smith"],
       },
       {
@@ -23,20 +23,20 @@ const jobList=[
         isResolved: false,
         providerID: "companyABC", // Replace with actual principal ID
         assignedTo: null,
-        reward: 2000,
-        currency: "EUR",
+        reward: 2,
+        currency: "cketh",
         bids: ["$1500 per page - Design Agency", "Custom quote - Freelancer X"],
       },
       {
         id: "bounty3",
-        title: "Fix a plumbing leak",
+        title: "Fix a breach",
         description: "I have a small leak under my kitchen sink. Need a licensed plumber to diagnose and fix the issue.",
         tags: ["plumbing", "repair", "home improvement"],
         isResolved: true,
         providerID: "user456", // Replace with actual principal ID
         assignedTo: "plumberXYZ", // Replace with actual principal assigned
         reward: 75,
-        currency: "USD",
+        currency: "ICP",
         bids: ["$60 - Reliable Plumbing", "$80 - John's Fix-It Services"],
       },
 ]

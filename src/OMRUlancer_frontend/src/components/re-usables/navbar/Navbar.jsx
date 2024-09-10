@@ -3,7 +3,7 @@ import './navbar.css'
 import { TbManualGearboxFilled } from 'react-icons/tb'
 import { useAuthClient } from '../../../utils/useAuthClient'
 
-const Navbar = ({nav}) => {
+const Navbar = ({nav,setLoading}) => {
   const {isAuthenticated,logout,login,actors}=useAuthClient()
   const authenticate=async()=>{
     let res=await login()

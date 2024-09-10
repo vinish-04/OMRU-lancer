@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const FeatureCard = ({feature,shouldAnimate}) => {
   return (
-    <motion.div animate={{opacity:shouldAnimate?1:0,scale:shouldAnimate?1:0}} transition={{duration:1}} className='feature-card'>
+    <motion.div animate={{opacity:shouldAnimate?1:0}} transition={{duration:1}} className='feature-card'>
      <h1 className="feature-card-title">{feature?.title}</h1>
         {
           feature?.icon

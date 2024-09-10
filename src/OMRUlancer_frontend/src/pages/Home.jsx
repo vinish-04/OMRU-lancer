@@ -6,6 +6,8 @@ import Features from '../components/home/features-sec/Features'
 import {useNavigate} from 'react-router-dom'
 import FeaturedJobs from '../components/home/jobs/FeaturedJobs'
 import { useAuthClient } from '../utils/useAuthClient'
+import Loader from '../components/re-usables/loader/Loader'
+import ReactModal from 'react-modal'
 
 const Home = ({login}) => {
 
@@ -13,6 +15,7 @@ const Home = ({login}) => {
   const [lastYpos,setLastYpos]=useState(0)
   const nav=useNavigate()
   const {actors,setUser}=useAuthClient()
+  const [loading,setLoading]=useState(false)
 
   useEffect(()=>{
 
@@ -52,11 +55,21 @@ const Home = ({login}) => {
 
   return (
     <div className='page'>
-        <Navbar nav={nav}/>
+        <Navbar nav={nav} setLoading={setLoading}/>
         <Hero nav={nav} login={login}/>
         <FeaturedJobs nav={nav}/>
         <Features shouldAnimate={shouldAnimate}/>
         <Footer/>
+        <ReactModal
+          isOpen={loading}
+          className='modal'
+          ariaHideApp={false}
+          style={{ 
+              overlay: { backdropFilter: 'blur(3px)' , zIndex:50, backgroundColor:'rbg(0,0,0,0%)'}, 
+          }}
+        >
+        <Loader/>
+      </ReactModal>
     </div>
   )
 }

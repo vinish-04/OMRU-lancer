@@ -10,6 +10,7 @@ module{
     public let DUPLICATE_BID="You have already placed a bid on this bounty";
     public let PROVIDER_SAME_AS_FREELANCER="You canot place a bid on your own listed bounty";
     public let BOUNTY_ALREADY_RESOLVED="This bounty is already resolved";
+    public let NO_BID_FOUND="No bid found with this id";
 
     // responses 
     public let USER_CREATED="User created successfully";

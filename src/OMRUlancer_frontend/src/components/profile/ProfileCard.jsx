@@ -1,7 +1,6 @@
 import React from 'react'
 
-const ProfileCard = ({user,becomeProvider}) => {
-    console.log("user",user,"val", (user?.img=="img" || user?.img==undefined))
+const ProfileCard = ({user,becomeProvider,showProviderContinue}) => {
   return (
     <div className="profile-user-detail-cont">
           <img src={
@@ -16,11 +15,17 @@ const ProfileCard = ({user,becomeProvider}) => {
           <div className="profile-user-detail-text-cont">
             <h1 className="profile-name">Name : {user?.username}</h1>
             <p className="profile-email">email : {user?.email}</p>
-            <p className="profile-email">profile : {Object.keys(user?.userType)[0]}</p>
+            <p className="profile-email">profile : {Object?.keys(user?.userType)[0]}</p>
           </div>       
-          <button className="profile-provider-btn" onClick={becomeProvider}>
-            Become Provider
-        </button>  
+          {
+            Object?.keys(user?.userType)[0]=="provider"?
+            <></>
+            :
+            <button className="profile-provider-btn" onClick={()=>showProviderContinue(true)}>
+              Become Provider
+            </button>  
+          }
+          
     </div>
   )
 }

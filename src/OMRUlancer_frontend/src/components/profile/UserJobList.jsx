@@ -2,6 +2,8 @@ import React from 'react'
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { useDispatch, useSelector } from 'react-redux';
 import { updateJob } from '../../redux/job/jobSlice';
+import { Principal } from '@dfinity/principal';
+import { ids } from '../../utils/useAuthClient';
 
 const demoBounties = [
   {
@@ -128,11 +130,11 @@ const bounties = [
 // console.log(bounties);
 
 
-const UserJobList = ({bounties,user,nav}) => {
+const UserJobList = ({bounties,user,nav,setCurrJob,setShowBids,setShowAssigned}) => {
 
   const job=useSelector(state=>state.job.value)
   const dispatch=useDispatch()
-
+  // console.log(bounty?.assignedTo)
   return (
     <div className='profile-joblist-cont'>
       
@@ -148,11 +150,26 @@ const UserJobList = ({bounties,user,nav}) => {
                 </p>
                 <p className="p-jobcard-text">
                   <strong>Bounty : </strong>
-                  {parseInt(bounty?.reward)} {Object.keys(bounty?.currency)[0]}
+                  {parseInt(bounty?.reward)/Math.pow(10,8)} {Object.keys(bounty?.currency)[0]}
                 </p>
-                <p className="p-jobcard-text2">
-                  View Applications
-                </p>
+                {
+                  // console.log(bounty?.assignedTo[0],bounty?.assignedTo,bounty?.assignedTo==[],bounty?.assignedTo?._isPrincipal?.[0]==undefined,Principal.fromText(ids.backend)?._isPrincipal)
+                  bounty?.assignedTo[0]==undefined?
+                  <p className="p-jobcard-text2" onClick={()=>{
+                    setCurrJob(bounty)
+                    setShowBids(true)
+                  }}>
+                    View Applications
+                  </p>
+                  :
+                  <p className="p-jobcard-text2" onClick={()=>{
+                    setCurrJob(bounty)
+                    setShowAssigned(true)
+                  }}>
+                    View Freelancer assigned
+                  </p>
+                }
+
                 <FaArrowUpRightFromSquare 
                   className='p-jobcard-redirect'
                   onClick={()=>{

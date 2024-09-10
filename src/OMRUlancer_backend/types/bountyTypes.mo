@@ -31,5 +31,8 @@ module{
         freelancerID:Principal;
         bountyID:Text;
         message:Text;
+        isApproved:Bool;
+        isRejected:Bool;
+        resume:Text;
     };
 }

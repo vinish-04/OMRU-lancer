@@ -36,18 +36,30 @@ const demoBids = [
 
 // const demoBids=[]
 
-const UserApplicationList = () => {
+const UserApplicationList = ({user,bids}) => {
+  console.log("user applications  : ",bids)
   return (
     <div className='profile-applications-cont'>
       {
-        demoBids?.length>0?
-        demoBids.map((bid)=>(
+        bids?.length>0?
+        bids.map((bid)=>(
           <div className="p-application-card">
             <p className="p-application-title">
-              {bid.bountyID}
+              {bid?.jobData?.title}
             </p>
             <p className="p-application-message">
-              {bid.message}
+              {bid?.message}
+            </p>
+            <p className="p-application-status" style={(bid?.isApproved)?{color:'green'}:(bid?.isRejected)?{color:'red'}:{color:'purple'}}>
+              {
+                bid?.isApproved?
+                "Approved"
+                :
+                bid?.isRejected?
+                "Rejected"
+                :
+                "Pending"
+              }
             </p>
             <FaArrowUpRightFromSquare className='p-application-redirect'/>
           </div>

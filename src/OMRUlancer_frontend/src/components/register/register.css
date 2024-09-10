@@ -27,3 +27,32 @@
 .register-btn{
     @apply my-5 px-6 py-3 font-bold bg-gradient-to-br from-purple-900 to-blue-950 rounded-3xl text-xl text-white;
 }
+.register-terms-cont{
+    @apply flex justify-center items-center w-[75%]
+}
+.register-terms-agree-check{
+    @apply mr-2
+}
+.register-terms-agree-text{
+    @apply text-sm
+}
+.register-terms-agree-text em{
+    @apply text-blue-500 cursor-pointer font-bold
+}
+
+/* tc modal  */
+.tnc-close-modal{
+    @apply absolute top-[20px] right-3 font-bold text-xl cursor-pointer outline-1 
+}
+.tnc-main-cont{
+    @apply bg-black text-white w-[30vw] h-[60vh] flex flex-col items-center py-6 rounded-xl relative
+}
+.tnc-title{
+    @apply text-4xl mb-6 font-semibold
+}
+.tnc-text{
+    @apply text-sm w-[80%] h-[70%] overflow-y-scroll 
+}
+.tnc-btn{
+    @apply my-5 px-6 py-3 font-bold bg-gradient-to-br from-purple-900 to-blue-950 rounded-3xl text-xl text-white;
+}

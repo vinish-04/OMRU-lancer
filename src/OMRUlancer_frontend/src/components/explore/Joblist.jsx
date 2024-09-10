@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
+import { useDispatch, useSelector } from 'react-redux';
+import { updateJob } from '../../redux/job/jobSlice';
 
-
+const idList=[
+  "wrzau-uxdzu-jrqka-l4rkr-btl2p-6hgwm-jmid5-uy2wl-drgqq-ij3kf-2ae#0",
+  "s56bx-x4jgz-vujp6-kcsdy-ozzpr-kivvv-qfu2l-ddbhc-uzshh-43zfi-2ae#0"
+]
 const demoBounties = [
     {
       id: "bounty1",
@@ -62,14 +67,63 @@ const demoBounties = [
     },
   ];
 
-const Joblist = ({nav}) => {
+
+const Joblist = ({nav,loading,setLoading,bounties,setBounties,setFilteredBounties}) => {
+  const actor=useSelector(state=>state.actor.value)
+  const dispatch=useDispatch()
+
+  async function getBountyDetails(){
+    try{
+      let bountyList=[]
+      for(let i=0;i<idList?.length;i++){
+        let bountyRes=await actor?.backendActor?.getBountyDetails(idList[i])
+        if(bountyRes?.err!=undefined){
+          console.log(bountyRes?.err)
+          continue
+        }
+        bountyList.push(bountyRes?.ok)
+      }
+      console.log(bountyList)
+      setBounties(bountyList)
+    }catch(err){
+      console.log(err)
+    }
+  }
+
+  async function getAllJobs(){
+    try{
+      setLoading(true)
+      let bountyList=[]
+      let bountyRes=await actor?.backendActor?.getAllJobs(10,1)
+      if(bountyRes?.err!=undefined){
+        console.log(bountyRes?.err)
+        setLoading(false)
+        return
+      }
+      for(let i=0;i<bountyRes?.ok?.length;i++){
+        bountyList.push(bountyRes?.ok[i][1])
+      }
+      console.log(bountyRes?.ok)
+      console.log("all jobs : ",bountyList)
+      setBounties(bountyList)
+      setFilteredBounties(bountyList)
+      setLoading(false)
+    }catch(err){
+      console.log(err)
+      setLoading(false)
+    }
+  }
+
+  useEffect(()=>{
+    getAllJobs()
+  },[])
   return (
     <div className='explore-joblist'>
         {
-            demoBounties?.length>0?
-            demoBounties?.map((bounty)=>(
-                <div className="e-jobcard">
-                    <img src="sampleJob.jpg" alt="job" className="e-jobcard-img" />
+            bounties?.length>0?
+            bounties?.map((bounty,index)=>(
+                <div className="e-jobcard" key={index}>
+                    <img src="sampleJob.jpg" alt="job " className="e-jobcard-img" />
                     <div className="e-jobcard-detail-cont">
                         <p className="e-jobcard-text">
                         <strong>Title : </strong>
@@ -77,12 +131,15 @@ const Joblist = ({nav}) => {
                         </p>
                         <p className="e-jobcard-text">
                         <strong>Bounty : </strong>
-                        {bounty?.reward} {bounty?.currency}
+                        {parseInt(bounty?.reward)/Math.pow(10,8)} {Object.keys(bounty?.currency)[0]}
                         </p>
 
                         <FaArrowUpRightFromSquare 
                             className='e-jobcard-redirect'
-                            onClick={()=>nav('/bounty')}
+                            onClick={()=>{
+                              dispatch(updateJob(bounty))
+                              nav('/bounty')
+                            }}
                         />
                     </div>
                 </div>

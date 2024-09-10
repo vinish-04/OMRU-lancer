@@ -1,11 +1,15 @@
 import React from 'react'
+import toast from 'react-hot-toast';
 import { RxCross1 } from "react-icons/rx";
 
-const ApplyModal = ({setShowApply,applyForJob}) => {
+const ApplyModal = ({setShowApply,applyForJob,setResume}) => {
     const apply=()=>{
         let msg=document.getElementById('apply-msg').value
+        if(msg==""){
+            toast.error("Please do not leave fields empty")
+            return
+        }
         applyForJob(msg)
-        setShowApply(false)
     }
   return (
     <div className='apply-modal'>
@@ -20,6 +24,18 @@ const ApplyModal = ({setShowApply,applyForJob}) => {
             cols={30}
             className='apply-message'
             placeholder='Write a messsage to make your application more appealing'
+        />
+        <label className="apply-resume-inp-label">
+            Select resume (in PDF): 
+        </label>
+        <input 
+            accept='application/pdf'
+            type="file" 
+            className='apply-resume-inp'
+            onChange={(e)=>{
+              setResume(e.target.files[0])
+            //   console.log(profile)
+            }}
         />
         <button 
             className='apply-btn' 
